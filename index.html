@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ogün Birinci · Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f5f7fb;
+        --bg-card: rgba(255, 255, 255, 0.85);
+        --text: #1f2933;
+        --accent: #3b82f6;
+        --shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f172a;
+          --bg-card: rgba(15, 23, 42, 0.82);
+          --text: #e2e8f0;
+          --accent: #60a5fa;
+          --shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: radial-gradient(circle at top, rgba(59, 130, 246, 0.35), 10%,
+            rgba(59, 130, 246, 0)),
+          var(--bg);
+        color: var(--text);
+        padding: 2rem;
+      }
+
+      main {
+        width: min(720px, 100%);
+        background: var(--bg-card);
+        border-radius: 24px;
+        padding: 3rem clamp(2rem, 6vw, 3rem);
+        backdrop-filter: blur(12px);
+        box-shadow: var(--shadow);
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin-bottom: 1rem;
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        font-size: clamp(1rem, 2.2vw, 1.15rem);
+        line-height: 1.6;
+        margin: 0 0 1.75rem;
+        max-width: 60ch;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      a.button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.85rem 1.5rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        background: rgba(148, 163, 184, 0.12);
+        color: var(--text);
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease,
+          background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        box-shadow: none;
+      }
+
+      a.button.secondary {
+        border-color: rgba(148, 163, 184, 0.35);
+      }
+
+      a.button:hover,
+      a.button:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 35px rgba(59, 130, 246, 0.35);
+        background: var(--accent);
+        color: #fff;
+        border-color: transparent;
+      }
+
+
+      footer {
+        margin-top: 2.5rem;
+        font-size: 0.95rem;
+        color: rgba(100, 116, 139, 0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Welcome 👋</h1>
+      <p>
+        I’m Ogün Birinci, an indie developer crafting focused tools that make
+        creativity, planning, and day-to-day routines a little smoother. Explore
+        my latest apps below and see what sparks your interest.
+      </p>
+      <div class="links">
+        <a
+          class="button"
+          href="https://apps.apple.com/us/app/ar-drawing-sketch-outlino/id6749918612"
+          >Outlino — AR Drawing</a
+        >
+        <a
+          class="button secondary"
+          href="https://apps.apple.com/us/app/dreamatix-interpret-dreams/id6740299229"
+          >Dreamatix — Dream Journal</a
+        >
+        <a
+          class="button secondary"
+          href="https://apps.apple.com/us/app/countdown-widget-soon/id6747208735"
+          >Soon — Countdown Widget</a
+        >
+        <a
+          class="button secondary"
+          href="https://apps.apple.com/us/app/parkspot-parking-tracking/id6736427647"
+          >ParkSpot — Parking Tracker</a
+        >
+      </div>
+      <footer>
+        © <span id="year"></span> Ogün Birinci. Published via GitHub Pages.
+      </footer>
+    </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+
